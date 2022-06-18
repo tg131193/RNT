@@ -1,0 +1,168 @@
+  {% extends 'base.html' %}
+  {% load static %}
+  {% block title %}home{% endblock title %}
+
+
+{% block container1 %}
+
+{% endblock container1  %}
+{% block container2 %}
+<!--2nd col| 2 div-->
+<h1 class="text-center">Notice Board</h1><!-- Button trigger modal -->
+<h1 class="text-center"><button type="button" class="btn btn-primary " data-bs-toggle="modal"
+        data-bs-target="#staticBackdrop1">
+        Notice Board / Recent Job Notices
+    </button></h1>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false"
+    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-md ">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Notice Board</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <table class="table table-hover  table-responsive  ">
+                    <thead class="thead-inverse">
+                        <tr>
+                            <th scope="col">No</th>
+                                <th scope="col">job title</th>
+                                <th scope="col">last_date</th>
+                                <th scope="col"> Qualification</th>
+                                <th scope="col">post</th>
+                               
+                                <th scope="col">More</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for jobs in job %}
+                        <tr class=" border-primary">
+                            <th scope="row">{{forloop.counter}}</th>
+                            <th>{{jobs.job_title|truncatewords:5}}</th>
+                            <td>{{jobs.last_date}}</td>
+                            <td>{{jobs.qualifications|truncatewords:5}}</td>
+                            <td>{{jobs.job_post}}</td>
+                           
+                            <td> <a href="{% url 'job_details' pk=jobs.id %}" class="card-link">Detail..</a></td>
+                        </tr>
+                        {% endfor %}
+
+                       
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary"
+                    data-bs-dismiss="modal">Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--2nd col| 2 div end-->
+<!--2nd col| 3 div -->
+<div class="col-row-4">
+    
+    <div class="card" style="background-color:orangered; border-color:darkblue;">
+        <img class="card-img-top" src="holder.js/100x180/" height="100" alt="">
+        <div class="card-body">
+            <h4 class="card-title">add 100</h4>
+            <p class="card-text">Text</p>
+        </div>
+    </div>
+    
+    <h3 class="col-row-4">
+        
+        <!-- Button trigger modal -->
+        <h3 class="text-center"><button type="button" class="btn btn-primary" data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop5">
+            Results / Admit Card Notice
+        </button></h3>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop5" data-bs-backdrop="static" data-bs-keyboard="false"
+        tabindex="-1" aria-labelledby="staticBackdropLabel5" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-md">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel5">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Tital</th>
+                                <th>Result / Admit</th>
+                                <th>Link..</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for notice_post in notice %}
+                            
+                            <tr>
+                                <td scope="row">{{forloop.counter}}</td>
+                                <td>{{notice_post.notice}}</td>
+                                <td>{{notice_post.description|truncatewords:20}}</td>
+                                
+                                <td></td>
+                                <td> <a href="{{notice_post.link}}" class="card-link"  target="_blank">Detail..</a></td>
+                            </tr>
+                                            {% endfor %}
+                                            
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+ <!--2nd col| 2 div end-->
+ 
+ 
+ 
+ 
+ 
+ {% endblock container2  %}
+ {% block container3 %}
+   <!--3th col-->
+   
+    <!--3th row | 1st div-->
+    <div class=" shadow p-2 border">
+     <!--change data-->
+    <div class="mb-3">
+   <label for="" class="form-label">Free jobs Natifications</label>
+     <input type="email" class="form-control" name="" id="" aria-describedby="emailHelpId"
+   placeholder="">
+     <small id="emailHelpId" class="form-text text-muted"></small>
+
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    
+ <!--2nd col| 2 div -->
+ 
+ <div class="card" style="background-color:orangered; border-color:darkblue;">
+   <img class="card-img-top" src="holder.js/100x180/" alt="">
+   <div class="card-body">
+     <h4 class="card-title">Title</h4>
+     <p class="card-text">Text</p>
+   </div>
+ </div>
+ <!--2nd col| 2 div end-->
+
+
+{% endblock container3  %}

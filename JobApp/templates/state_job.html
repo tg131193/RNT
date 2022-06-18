@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+
+{% block container2 %}
+
+
+
+
+            <!--seccend col-->
+         
+               
+                <div class=" mb-5 mt-2">
+                    <!---main -->
+                    <h3 class="text-center mb-5 text-capfirst">{{job_name}}</h3>
+                    <table class=" table table-sm hover table-inverse table-responsive  "  >
+                        <thead class="thead-defaul">
+                            <tr>
+                                <th scope="col">No</th>
+                                <th scope="col">job title</th>
+                                <th scope="col">last_date</th>
+                                <th scope="col"> Qualification</th>
+                                <th scope="col">post</th>
+                                <th scope="col">More</th>
+                            </tr>
+                        </thead>
+                        <tbody style="overflow-y: scroll; ">
+                            
+                            {% for jobs in state_job %}
+                            <tr>
+                                <th scope="row">{{forloop.counter}}</th>
+                                <th scope="row">{{jobs.job_title}}</th>
+                                <td>{{jobs.last_date}}</td>
+                                <td>{{jobs.qulifications}}</td>
+                                <td>{{jobs.job_post}}</td>
+                                <td> <a href="{% url 'job_details' pk=jobs.id %}" class="card-link">More..</a></td>
+                               
+                            </tr>
+                            {% endfor %}
+                      
+                       
+                       
+                         </tbody>
+                    </table>
+                </div>
+                   
+                    
+               {% endblock container2  %}

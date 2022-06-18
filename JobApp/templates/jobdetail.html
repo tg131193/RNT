@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block container2 %}
+                <div class="col-row-4">
+                    <h1 class="m-3"> Descriptions For a Job Applying</h1><hr class='shadow'>
+                    <p>{{job_detail_page.job_description}}</p>
+                    
+                    
+                </div>
+                <!--2nd col | 2nd div-->
+                <div class="col-row-4 m-2 hidden">
+                    <div class="card text-white bg-success">
+                        <img class="card-img-top" src="holder.js/100px180/" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title">Title</h4>
+                            <p class="card-text">Text</p>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <!---- 2nd col| 2div-->
+               
+
+            
+                <ul class="list-group">
+                    <li class="list-group-item d-flex justify-content-center align-items-center active ">
+                        job details
+                        
+                    </li>
+                    
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Tital:
+                        <span class=" ">{{job_detail_page.job_title}}</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        start date:
+                        <span class=" ">{{job_detail_page.start_date}}</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        last date:
+                        <span class=" ">{{job_detail_page.last_date}}</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Qualifications:
+                        <span class=" ">{{job_detail_page.qualifications}}</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        age limit :
+                        <span class=" ">{{job_detail_page.age_limit}}</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Total Post :
+                        <span class=" ">{{job_detail_page.job_post}}</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Deatial Post :
+                        <span class=" ">{{job_detail_page.recruitment_post}}</span>
+                    </li>
+                   
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        State :
+                        <span class=" ">{{job_detail_page.state}}</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Requiredment Board :
+                        <span class=" ">{{job_detail_page.job_borad}}</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Notication No :
+                        <span class=" ">{{job_detail_page.notification_no}}</span>
+                    </li>
+                    {% if job_detail_page.notice %}
+                    
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Notice download  :
+                        
+
+                        <span><a target="_blank"  class="navbar-brand" href="{{job_detail_page.notice}}" download>Click..</a></span>
+                    </li>
+                    {% endif %}
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Notice :
+                       
+                        <span><a target="_blank"  class="navbar-brand" href="{{job_detail_page.notice_link}}">Click..</a></span>
+                        
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center bg-red">
+                        applaying link: 
+                        <span><a target="_blank"  class="navbar-brand" href="{{job_detail_page.apply_link}}">Click..</a></span>
+                      
+                       
+             
+                </ul>
+
+
+
+                 <!--2nd col | 3rd div-->
+                 <div class="col-row-4 m-2 hidden">
+                    <div class="card text-white bg-success">
+                        <img class="card-img-top" src="holder.js/100px180/" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title">Title</h4>
+                            <p class="card-text">Text</p>
+                        </div>
+                    </div>
+                    
+                </div>
+               
+                
+   {% endblock container2  %}   
+   {% block container3  %}
+   <div class="card" style="background-color:orangered; border-color:darkblue;">
+     <img class="card-img-top" src="holder.js/100x180/" alt="">
+     <div class="card-body">
+       <h4 class="card-title">Title</h4>
+       <p class="card-text">Text</p>
+     </div>
+   </div>   
+   {% endblock container3  %}   
+                
+                   
+                    
+
+
+                   
+                
+
+
+
+

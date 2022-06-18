@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+
+{% block container2 %}
+
+
+
+
+            <!--seccend col-->
+         
+               
+                <div class=" col-12 mb-5 mt-2">
+                    <!---main -->
+                    <h3 class="text-center mb-2">{{job_name}}</h3>
+                    <h3 class="text-start mb-5 mb-2"> number of job :{{number_of_job}}</h3>
+                    <table class=" table table-sm hover table-inverse table-responsive table-bordered "  >
+                        <thead class="thead-defaul">
+                            <tr>
+                                <th scope="col">No</th>
+                                <th scope="col">job title</th>
+                                <th scope="col">last_date</th>
+                                <th scope="col"> Qualification</th>
+                                <th scope="col">post</th>
+                                <th scope="col"> State</th>
+                                <th scope="col">More</th>
+                            </tr>
+                        </thead>
+                        <tbody style="overflow-y: scroll; ">
+                            
+                            {% for jobs in jobs_category %}
+                            <tr class='text-center'>
+                                <th scope="row">{{forloop.counter}}</th>
+                                <th>{{jobs.job_title|truncatewords:5}}</th>
+                                <td>{{jobs.last_date}}</td>
+                                <td>{{jobs.qualifications|truncatewords:5}}</td>
+                                <td>{{jobs.job_post}}</td>
+                                <td>{{jobs.state}}</td>
+                                <td> <a href="{% url 'job_details' pk=jobs.id %}" class="card-link">Detail..</a></td>
+                               
+                            </tr>
+                            {% endfor %}
+                      
+                       
+                       
+                         </tbody>
+                    </table>
+                </div>
+                   
+                    
+               {% endblock container2  %}
+
+
+ {% block container3 %}
+               <div class="card text-white bg-primary">
+                 <img class="card-img-top" src="holder.js/100px180/" alt="">
+                 <div class="card-body">
+                   <h4 class="card-title">Title</h4>
+                   <p class="card-text">Text</p>
+                 </div>
+               </div>
+               
+{% endblock container3 %}
+
+               
+
+
+
+            
+            

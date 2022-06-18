@@ -1,0 +1,205 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+ <!--- main contain-->
+ {% block maim1 %}
+
+ <div class="container-fluid mt-3">
+    <div class="row row-cols-md-3 row-cols-sm-1">
+        <!--first col-->
+        <div class="col-md-3 col-sm-12">
+
+             <!--1st col|1st div-->
+             
+             <div class="list-group mb-2">
+                <h3 class="text-center">Category For Jobs</h3>
+                    <a href="" class="list-group-item list-group-item-action list-group-item-primary">Indian Govt Jobs</a>
+ 
+                    <a href="{% url 'bank_jobs' 'bank' %}" class="list-group-item list-group-item-action list-group-item-primary">Bank Jobs</a>
+                    <a href="{% url 'Upsc_jobs' 'upsc' %}" class="list-group-item list-group-item-action list-group-item-primary">UPS Jobs</a>
+                   <a href="{% url 'ssc_jobs' 'Ssc' %}" class="list-group-item list-group-item-action list-group-item-primary">SSS Jobs</a>
+                        <a href="{% url 'defence/police_jobs' 'Defence' %}" class="list-group-item list-group-item-action list-group-item-primary">Police/Defence Jobs</a>
+                   <a href="{% url 'Teaching_jobs' 'traching' %}" class="list-group-item list-group-item-action list-group-item-primary">Teaching Jobs</a>
+                   <a href="{% url 'Engineering_jobs' 'engineering' %}" class="list-group-item list-group-item-action list-group-item-primary">EngineeringJobs</a>
+                   <a href="{% url 'medical_jobs' 'medical' %}" class="list-group-item list-group-item-action list-group-item-primary">Medical Jobs</a>
+                   <a href="{% url 'Railways_jobs' 'Railways' %}" class="list-group-item list-group-item-action list-group-item-primary">RailwaysJobs</a>
+                   <button type="button" class="btn btn-primary list-group-item-primary " data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop">
+                    Search For State Jobs
+                </button>
+                   
+                </div>
+                <!--1st col|1st div| end-->
+                
+                
+                <!--1st col|1st div-->
+                <div class="card" style="background-color:orangered; border-color:darkblue;">
+                  <img class="card-img-top" src="holder.js/100x180/" alt="">
+                  <div class="card-body">
+                    <h4 class="card-title">Title</h4>
+                    <p class="card-text">Text</p>
+                  </div>
+                </div>
+
+                <!--1st col|1st div| end-->
+
+
+                <!--1st col|1st div-->
+                   <!---data change-->
+                <!-- Button trigger modal 
+                <button type="button" class="btn btn-primary mt-2" data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop">
+                    Search For State Jobs
+                </button>-->
+
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable modal-md">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Indian States </h5>
+
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="list-group">
+                                    <h3 class="text-center">all india state</h3>
+                                    <a href="{% url 'Andaman_Nicobar_Islands' 'Andaman_Nicobar_Islands' %}"
+                                        class="list-group-item list-group-item-action list-group-item-primary">Andaman Nicobar Islands                              </a>
+                                    <a href="{% url 'Andhra_Pradesh' 'Andhra_Pradesh' %}"
+                                        class="list-group-item list-group-item-action list-group-item-primary">Andhra Pradesh                                        Pradesh
+                                        </a>
+                                    <a href="{% url 'Arunachal_Pradesh' 'Arunachal_Pradesh' %}"
+                                        class="list-group-item list-group-item-action list-group-item-primary">Arunachal Pradesh
+                                        </a>
+                                    <a href="{% url 'Assam' 'Assam' %}"
+                                        class="list-group-item list-group-item-action list-group-item-primary">Assam</a>
+                                    <a href="{% url 'Bihar' 'Bihar' %}"
+                                        class="list-group-item list-group-item-action list-group-item-primary">Bihar</a>
+                                    <a href="{% url 'Chandigarh' 'Chandigarh' %}"
+                                        class="list-group-item list-group-item-action list-group-item-primary">Chandigarh</a>
+                                    <a href="{% url 'Dadra_Nagar_Haveli' 'Dadra_Nagar_Haveli' %}"
+                                        class="list-group-item list-group-item-action list-group-item-primary">Dadra Nagar Haveli</a>
+                                    <a href="{% url 'Daman_and_Diu' 'Daman_and_Diu' %}"
+                                        class="list-group-item list-group-item-action list-group-item-primary">Daman and Diu</a>
+                                    <a href="{% url 'Delhi' 'Delhi' %}"
+                                        class="list-group-item list-group-item-action list-group-item-primary">Delhi</a>
+                                    <a href="{% url 'Goa' 'Goa' %}"
+                                        class="list-group-item list-group-item-action list-group-item-primary">
+                                        Goa</a>
+                                    <a href="{% url 'Gujarat' 'Gujarat' %}"
+                                        class="list-group-item list-group-item-action list-group-item-primary">Gujarat</a>
+                                    <a href="{% url 'Haryana' 'Haryana' %}"
+                                        class="list-group-item list-group-item-action list-group-item-primary">Haryana</a>
+                                    <a href="{% url 'Himachal_Pradesh' 'Himachal_Pradesh' %}"
+                                        class="list-group-item list-group-item-action list-group-item-primary">Himachal Pradesh</a>
+                                    <a href="{% url 'Jammu_Kashmir' 'Jammu_Kashmir' %}"
+                                        class="list-group-item list-group-item-action list-group-item-primary"> Jammu Kashmir</a>
+                                    <a href="{% url 'Jharkhand' 'Jharkhand' %}"
+                                        class="list-group-item list-group-item-action list-group-item-primary">Jharkhand</a>
+                                    <a href="{% url 'Karnataka' 'Karnataka' %}"
+                                        class="list-group-item list-group-item-action list-group-item-primary">
+                                        Karnataka</a>
+                                    <a href="{% url 'Kerala' 'Kerala' %}"
+                                        class="list-group-item list-group-item-action list-group-item-primary">Kerala</a>
+                                    <a href="{% url 'Lakshadweep' 'Lakshadweep' %}"
+                                        class="list-group-item list-group-item-action list-group-item-primary">Lakshadweep
+                                        </a>
+                                    <a href="{% url 'Madhya Pradesh'  'Madhya_Pradesh' %}"
+                                        class="list-group-item list-group-item-action list-group-item-primary">Madhya Pradesh</a>
+                                    
+                                    <a href="{% url 'Maharashtra' 'Maharashtra' %}"
+                                        class="list-group-item list-group-item-action list-group-item-primary">Maharashtra</a>
+                                    <a href="{% url 'Manipur' 'Manipur' %}"
+                                        class="list-group-item list-group-item-action list-group-item-primary">Manipur
+                                        </a>
+                                    <a href="{% url 'Meghalaya' 'Meghalaya' %}"
+                                        class="list-group-item list-group-item-action list-group-item-primary">Meghalaya</a>
+                                    <a href="{% url 'Mizoram' 'Mizoram' %}"
+                                        class="list-group-item list-group-item-action list-group-item-primary">Mizoram</a>
+                                    <a href="{% url 'Nagaland' 'Nagaland' %}"
+                                        class="list-group-item list-group-item-action list-group-item-primary">Nagaland
+                                        </a>
+                                    <a href="{% url 'Odisha' 'Odisha' %}"
+                                        class="list-group-item list-group-item-action list-group-item-primary">Odisha</a>
+                                    <a href="{% url 'Puducherry' 'Puducherry' %}"
+                                        class="list-group-item list-group-item-action list-group-item-primary">Puducherry</a>
+                                    <a href="{% url 'Punjab' 'Punjab' %}"
+                                        class="list-group-item list-group-item-action list-group-item-primary">Punjab</a>
+                                    <a href="{% url 'Rajasthan' 'Rajasthan' %}"
+                                        class="list-group-item list-group-item-action list-group-item-primary">Rajasthan</a>
+                                    <a href="{% url 'Sikkim' 'Sikkim' %}"
+                                        class="list-group-item list-group-item-action list-group-item-primary">Sikkim</a>
+                                    <a href="{% url 'Tamil_Nadu' 'Tamil_Nadu' %}"
+                                        class="list-group-item list-group-item-action list-group-item-primary">Tamil Nadu</a>
+                                    <a href="{% url 'Telangana' 'Telangana' %}"
+                                        class="list-group-item list-group-item-action list-group-item-primary">Telangana</a>
+                                    <a href="{% url 'Tripura' 'Tripura' %}"
+                                        class="list-group-item list-group-item-action list-group-item-primary">Tripura</a>
+                                    <a href="{% url 'Uttarakhand' 'Uttarakhand' %}"
+                                        class="list-group-item list-group-item-action list-group-item-primary">Uttarakhand</a>
+                                    <a href="{% url 'Uttar_Pradesh' 'Uttar_Pradesh' %}"
+                                        class="list-group-item list-group-item-action list-group-item-primary">Uttar Pradesh/a>
+                                    <a href="{% url 'West_Bengal' 'West_Bengal' %}"
+                                        class="list-group-item list-group-item-action list-group-item-primary">West Bengal</a>
+                                    <a href="{% url 'All_India' 'All_India' %}"
+                                        class="list-group-item list-group-item-action list-group-item-primary">All India</a>
+                                    
+
+                                </div>
+
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary"
+                                    data-bs-dismiss="modal">Close</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--data change-->
+                <!--1st col|1st div| end-->
+                
+                
+            
+                {% block container1 %}{% endblock container1  %}
+       
+       
+        </div>
+        <!--seccend col-->
+        <div class="col-md-6 col-sm-12 mt-2 col-12">
+            
+            <!--2nd col|1st div| -->
+            <div class="card" style="background-color:orangered; border-color:darkblue;">
+              <img class="card-img-top" src="holder.js/100x180/" alt="">
+              <div class="card-body">
+                <h4 class="card-title">add</h4>
+                <p class="card-text">Text</p>
+              </div>
+            </div>
+            <!--2nd col|1st div| end-->
+
+           
+                {% block container2 %}{% endblock container2  %}
+                 <!----hhhh-->
+           
+         </div>
+
+          <!----hhhh--> 
+            <div class="col-md-3 col-sm-12 mt-2 ">
+                {% block container3 %}
+
+
+                {% endblock container3  %} 
+            </div>
+            
+            <!----hhhh-->
+        </div>
+    </div>
+</div>
+{% endblock maim1 %}
